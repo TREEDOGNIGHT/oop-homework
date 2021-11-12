@@ -5,10 +5,11 @@ class President {
 
   // Method Definition - again, notice the "public" keyword before the actual definition
   public function greet($name) {
-    return "Hello INSERT_NAME_HERE, my name is $name, nice to meet you!";
+    return "Hello $name, my name is Barack Obama, nice to meet you!";
   }
 }
 $us_president = new President();
 
-echo $us_president->greet('Donald');
+$president_name = $us_president->name;
 
+$greetings_from_president = $us_president->greet('Donald');
