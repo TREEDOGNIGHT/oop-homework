@@ -28,7 +28,7 @@ if ($_POST["content"] && !empty($_POST["content"])) {
     <p><?= Top10($content, 'sentences', 'longest'); ?></p>
     <p><?= Top10($content, 'sentences', 'shortest'); ?></p>
     <p>Count palidromes: <?= countPalidrome($content); ?></p>
-    <p></p>
+    <p>Top 10 palidromes: <?= top10_palidrome($content); ?></p>
 
     <?php ob_end_flush();
 

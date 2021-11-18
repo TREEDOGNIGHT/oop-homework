@@ -34,7 +34,24 @@ function find_palidrome($str){
     $palidrome_array = array_unique($palidrome_array);
     return $palidrome_array;
 }
+
 function countPalidrome($str){
     $array = find_palidrome($str);
     return count($array);
+}
+
+function top10_palidrome($str){
+    $return_string = '';
+    $array = find_palidrome($str);
+
+    usort($array, function ($a, $b) {
+        return strlen($b) <=> strlen($a);
+    });
+    $array = array_slice($array, 0, 10);
+    foreach ($array as $item) {
+
+        $return_string .= "<p>$item</p>";
+
+    }
+    return $return_string;
 }
