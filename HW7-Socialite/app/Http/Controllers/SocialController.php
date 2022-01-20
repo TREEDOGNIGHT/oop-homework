@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Models\User;
-use Validator;
-use Socialite;
-use Exception;
 use Auth;
+use Exception;
+use Illuminate\Http\Request;
+use Socialite;
+use Validator;
 
 class SocialController extends Controller
 {

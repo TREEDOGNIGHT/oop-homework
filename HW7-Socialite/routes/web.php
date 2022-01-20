@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SocialController;
+use Illuminate\Support\Facades\Route;
 
 
 Route::get('auth/facebook', [SocialController::class, 'facebookRedirect']);
