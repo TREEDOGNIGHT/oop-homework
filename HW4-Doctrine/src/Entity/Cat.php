@@ -2,9 +2,6 @@
 
 namespace App\Entity;
 
-use App\Repository\CatRepository;
-use Doctrine\ORM\Mapping as ORM;
-
 /**
  * @ORM\Entity(repositoryClass=CatRepository::class)
  */

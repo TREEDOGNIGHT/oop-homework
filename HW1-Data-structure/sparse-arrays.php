@@ -9,20 +9,21 @@
  *  2. STRING_ARRAY queries
  */
 
-function matchingStrings($strings, $queries) {
-  $resultArray = array();
-foreach($strings as $value) {
-    if(in_array($value, $queries)){        
-    $resultArray[$value] = isset($resultArray[$value]) ? $resultArray[$value] + 1 : 1;           
-    } else {     
-        $resultArray[$value] = 0;  
+function matchingStrings($strings, $queries)
+{
+    $resultArray = array();
+    foreach ($strings as $value) {
+        if (in_array($value, $queries)) {
+            $resultArray[$value] = isset($resultArray[$value]) ? $resultArray[$value] + 1 : 1;
+        } else {
+            $resultArray[$value] = 0;
+        }
     }
-}
 
-foreach($queries as $value) {
-        $resultArray2[$value] = (!empty($resultArray[$value])) ? $resultArray[$value] : 0; 
-}
-return $resultArray2;
+    foreach ($queries as $value) {
+        $resultArray2[$value] = (!empty($resultArray[$value])) ? $resultArray[$value] : 0;
+    }
+    return $resultArray2;
 }
 
 $fptr = fopen(getenv("OUTPUT_PATH"), "w");

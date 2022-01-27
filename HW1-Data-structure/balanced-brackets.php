@@ -7,9 +7,10 @@
  * The function accepts STRING s as parameter.
  */
 
-function isBalanced($s) {
-     $opening_tag = array('}' => '{', ']' => '[', ')' => '(');
-       $parens = array();
+function isBalanced($s)
+{
+    $opening_tag = array('}' => '{', ']' => '[', ')' => '(');
+    $parens = array();
     foreach (str_split($s) as $char) {
         switch ($char) {
             case '{':
@@ -21,10 +22,10 @@ function isBalanced($s) {
             case ']':
             case ')':
                 if (!count($parens) || array_pop($parens) != $opening_tag[$char]) {
-                    
-                  return 'NO';
-                    
-                } 
+
+                    return 'NO';
+
+                }
                 break;
             default:
                 break;
