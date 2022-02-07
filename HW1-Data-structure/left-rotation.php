@@ -9,13 +9,14 @@
  *  2. INTEGER_ARRAY arr
  */
 
-function rotateLeft($d, $arr) {
-    
-     $d = $d % count($arr);
-     
-     $slice = array_splice($arr, $d);
-     
-     return array_merge($slice, $arr);
+function rotateLeft($d, $arr)
+{
+
+    $d = $d % count($arr);
+
+    $slice = array_splice($arr, $d);
+
+    return array_merge($slice, $arr);
 
 }
 

@@ -1,11 +1,12 @@
 <?php
-function palindrome($str) {
+function palindrome($str)
+{
     $l = 0;
     $r = strlen($str) - 1;
     $flag = 0;
 
-    while($r > $l){
-        if ($str[$l] != $str[$r]){
+    while ($r > $l) {
+        if ($str[$l] != $str[$r]) {
             $flag = 1;
             break;
         }
@@ -13,18 +14,19 @@ function palindrome($str) {
         $r--;
     }
 
-    if ($flag == 0){
+    if ($flag == 0) {
         return true;
     } else {
         return false;
     }
 }
 
-function find_palidrome($str){
+function find_palidrome($str)
+{
     $palidrome_array = [];
     $words = preg_split('/\s+/', $str, -1, PREG_SPLIT_NO_EMPTY);
     foreach ($words as $word) {
-        if(palindrome($word)){
+        if (palindrome($word)) {
             $palidrome_array[] = $word;
         } else {
             continue;
@@ -35,12 +37,14 @@ function find_palidrome($str){
     return $palidrome_array;
 }
 
-function countPalidrome($str){
+function countPalidrome($str)
+{
     $array = find_palidrome($str);
     return count($array);
 }
 
-function top10_palidrome($str){
+function top10_palidrome($str)
+{
     $return_string = '';
     $array = find_palidrome($str);
 

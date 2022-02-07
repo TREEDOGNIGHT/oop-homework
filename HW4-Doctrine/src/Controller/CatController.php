@@ -4,34 +4,34 @@
 namespace App\Controller;
 
 // ...
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Cat;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class CatController extends AbstractController
 {
 
-    private function create_input_forms() {
-
+    private function create_input_forms()
+    {
 
 
     }
-
 
 
     #[Route('/cats', name: 'cat_show_all')]
     public function index(ManagerRegistry $doctrine): Response
     {
 
-        $cats =  $doctrine->getRepository(Cat::class)->findAll();
+        $cats = $doctrine->getRepository(Cat::class)->findAll();
         return $this->render('cat/index.html.twig', [
             'controller_name' => 'CatController',
         ]);
     }
 
-    private function generateRandomString($length = 10) {
+    private function generateRandomString($length = 10)
+    {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
         $randomString = '';

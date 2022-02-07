@@ -20,18 +20,21 @@
 
 
 //Solution
-function calc($s) {
+function calc($s)
+{
     $res = '';
-    foreach(str_split($s) as $car) {
-        $res.= ord($car);
+    foreach (str_split($s) as $car) {
+        $res .= ord($car);
     }
     $res2 = str_replace('7', '1', $res);
     return array_sum(str_split($res)) - array_sum(str_split($res2));
 }
 
 //For test
-class CalcTest extends TestCase {
-    public function testExample() {
+class CalcTest extends TestCase
+{
+    public function testExample()
+    {
         $this->assertEquals(6, calc('ABC'));
     }
 }
