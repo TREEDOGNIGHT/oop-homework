@@ -1,0 +1,22 @@
+{
+  "require": {
+    "php": "^7.3",
+    "phpunit/phpunit": "^9.5",
+    "ext-mbstring": "*",
+    "ext-fileinfo": "*",
+    "phpoffice/phpspreadsheet": "^1.17",
+    "ext-curl": "*",
+    "ext-simplexml": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "classmap": [
+      "src/analyzer-main.php",
+      "src/file-upload.php",
+      "src/export-report.php",
+      "src/external-content.php"
+    ]
+  },
+  "name": "nazar-oop-hw-8/analyzer-text-2",
+  "description": "Text Analyzer"
+}
